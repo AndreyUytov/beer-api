@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>BeerS-APP</title>
+</head>
+<body>
+    <div id="root"></div>
+    <header class="home-page__header">
+        <div class="header__wrapper container">
+            <h1 class="home-page__title">
+                Может beer?
+            </h1>
+            <nav class="home-page__navigation">
+                <ul>
+                    <li>
+                        <a class="navigation__link navigation__link--active">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navigation__link">Избранное</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navigation__link">Корзина</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="home-page__main">
+        <div class="main__wrapper">
+            <section class="main__search">
+                <input class="search__input" type="text" placeholder="Искать пиво" />
+                <button class="search__button" type="button">Искать</button>
+            </section>
+            <section class="main__beer-section">
+                <ul class="beer-list">
+                    <li class="beer-item">
+                        <img src="https://images.punkapi.com/v2/184.png" width="200" height="500"/>
+                        <div class="beer-item__wrapper">
+                            <h3 class="beer-item__title">Название продукта</h3>
+                            <p class="beer-item__description">
+                                Описание продукта в нескольких строчках
+                            </p>
+                            <a class="beer-item__link" type="button" href="#">Подробнее</a>
+                            <button class="beer-item__favotite-btn" type="button">
+                                <span class="visually-hidden">
+                                    Добавить в избранное
+                                </span>
+                            </button>
+                            <button class="beer-item__buy-btn" type="button">Добавить в корзину</button>
+                        </div>
+                    </li>
+                    <li class="beer-item">
+                        <img src="https://images.punkapi.com/v2/192.png" width="200" height="500"/>
+                        <div class="beer-item__wrapper">
+                            <h3 class="beer-item__title">Название продукта</h3>
+                            <p class="beer-item__description">
+                                Описание продукта в нескольких строчках
+                            </p>
+                            <a class="beer-item__link" type="button" href="#">Подробнее</a>
+                            <button class="beer-item__favotite-btn" type="button">
+                                <span class="visually-hidden">
+                                    Добавить в избранное
+                                </span>
+                            </button>
+                            <button class="beer-item__buy-btn" type="button">Добавить в корзину</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="beer-pagination">
+                    <li class="beer-pagination__item">
+                        <a class="pagination-link" href="#">1</a>
+                    </li>
+                    <li class="beer-pagination__item">
+                        <a class="pagination-link" href="#">2</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="home-page__footer">
+        <ul class="footer-list">
+            <li class="footer-item">
+                Разработано: мной))
+            </li>
+            <li class="footer-item">
+                Начало разработки:02.12.19
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

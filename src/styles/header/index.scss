@@ -1,0 +1,30 @@
+.home-page__header {
+    background-color: rgba(105, 206, 105, 0.753);
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-page__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 50px;
+    text-transform: uppercase;
+    color: rgb(75, 78, 122);
+}
+
+.home-page__navigation ul{
+    @include ul-reset;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.navigation__link {
+    
+}
