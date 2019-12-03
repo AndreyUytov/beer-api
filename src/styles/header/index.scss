@@ -1,5 +1,5 @@
 .home-page__header {
-    background-color: rgba(105, 206, 105, 0.753);
+    background-color: rgba(188, 196, 221, 0.753);
 }
 
 .header__wrapper {
@@ -26,5 +26,19 @@
 }
 
 .navigation__link {
-    
+    min-width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    &--active {
+        text-decoration: underline;
+    }
+}
+
+.link-items {
+    margin-left: 5px;
 }

@@ -1,0 +1,25 @@
+.main__search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__input {
+    width: 60%;
+    height: 45px;
+    padding: 0 15px;
+
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+}
+
+.search__button {
+    width: 100px;
+    height: 45px;
+    margin-left: 10px;
+
+    background-color: rgba(188, 196, 221, 0.753);
+}

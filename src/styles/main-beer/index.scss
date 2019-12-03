@@ -1,0 +1,62 @@
+.main__beer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.beer-list {
+    @include ul-reset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.beer-item {
+    width: 350px;
+    height: 320px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 3px;
+
+    display: flex;
+    align-items: center;
+    
+    border: solid gray 1px;
+    box-shadow: gray 5px 5px;
+    background-color: rgba(188, 196, 221, 0.753);
+}
+
+.beer-item img {
+    max-width: 80px;
+    height: auto;
+    max-height: 314px;
+}
+
+.beer-item__wrapper {
+    position: relative;
+    margin: 10px 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.beer-item__favotite-btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+
+    display: flex;
+
+    background-image: url(../../images/icon-heart.svg);
+    background-repeat: no-repeat;
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}

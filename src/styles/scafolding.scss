@@ -16,6 +16,11 @@ html {
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url(../images/body-fon.png);
+	background-repeat: repeat;
+}
+
 .content-box-component {
 	box-sizing: content-box;
 }
@@ -39,8 +44,22 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	
+	color: black;
+
 	background-color: transparent;
 	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover {
+		background-color: rgba(109, 54, 131, 0.801);
+	}
+	&:active {
+		transform: scale(1.1);
+	}
 }
 
 .container {

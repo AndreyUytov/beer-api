@@ -1,0 +1,28 @@
+.beer-pagination {
+    width: 100%;
+    @include ul-reset;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-link {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid gray 1px;
+    box-shadow: gray 5px 5px;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: rgb(55, 71, 102) 5px 5px;
+    }
+    &--active {
+        background-color: rgb(74, 113, 139);
+    }
+}
