@@ -1,0 +1,15 @@
+.home-page__footer {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(188, 196, 221, 0.753);
+}
+
+.footer-list {
+    @include ul-reset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
