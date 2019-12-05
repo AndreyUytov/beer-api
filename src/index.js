@@ -2,17 +2,21 @@ import './index.html'
 
 import './styles/style.scss'
 
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import {Provider} from 'react-redux'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Provider} from 'react-redux'
+import {BrowserRouter as Router} from 'react-router-dom'
 
-// import {store} from 'store'
-// import { App } from 'components/app'
+import store from 'store'
+import routes from 'routes'
+import Template from 'components/template'
 
 
-// ReactDOM.render(
-//     <Provider store={store}>
-//         <App/>
-//     </Provider>,
-//     document.getElementById('root')
-// )
+ReactDOM.render(
+    <Provider store={store}>
+        <Router>
+            {routes}
+        </Router>
+    </Provider>,
+    document.getElementById('root')
+)

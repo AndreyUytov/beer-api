@@ -23,8 +23,10 @@
     align-items: center;
     
     border: solid gray 1px;
-    box-shadow: gray 5px 5px;
     background-color: rgba(188, 196, 221, 0.753);
+    &:hover {
+        box-shadow: gray 5px 2px 20px;
+    }
 }
 
 .beer-item img {
