@@ -2,11 +2,12 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import Template from 'components/template'
+import BeerList from 'components/beer-list'
 
 function Home (props) {
     return (
         <Template {...props}>
-            {props.beers.beers}
+            <BeerList beers={props.beers} />
         </Template>
     )
 }

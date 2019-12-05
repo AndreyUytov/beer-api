@@ -31,7 +31,6 @@ module.exports = env => {
       contentBase: path.resolve(__dirname, "build"),
       publicPath: "/",
       watchContentBase: true,
-      openPage: "index.html",
       historyApiFallback: true,
     },
 

@@ -9,10 +9,8 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 import store from 'store'
 import routes from 'routes'
-import Template from 'components/template'
 
-
-ReactDOM.render(
+ReactDOM.render (
     <Provider store={store}>
         <Router>
             {routes}
