@@ -9,7 +9,7 @@ const initialState = {
 export default function allBeers (state=initialState, {type, payload}) {
     switch (type) {
         case FETCH_BEERS_SUCCES:
-            return {...state, allBeers: payload }
+            return {...state, allBeers: state.allBeers.concat(payload) }
         default:
             return state
     }

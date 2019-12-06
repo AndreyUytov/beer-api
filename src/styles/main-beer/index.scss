@@ -13,6 +13,7 @@
 }
 
 .beer-item {
+    position: relative;
     width: 350px;
     height: 320px;
     margin-right: 10px;
@@ -36,7 +37,6 @@
 }
 
 .beer-item__wrapper {
-    position: relative;
     margin: 10px 10px;
     padding-left: 10px;
     display: flex;
@@ -44,11 +44,11 @@
 }
 
 .beer-item__favotite-btn {
-    width: 25px;
-    height: 25px;
     position: absolute;
     right: 25px;
     top: 15px;
+    width: 30px;
+    height: 30px;
 
     display: flex;
 
