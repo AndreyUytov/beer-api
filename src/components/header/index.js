@@ -8,7 +8,7 @@ export default class Header extends React.Component {
             <header className="home-page__header">
                 <div className="header__wrapper container">
                     <h1 className="home-page__title">
-                        Может beer?
+                        Может ----?
                     </h1>
                     <Nav {...this.props} />
                 </div>

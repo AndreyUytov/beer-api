@@ -3,7 +3,7 @@ import {
     FETCH_BEERS_SUCCES,
     FETCH_BEERS_FAIL
 } from 'actionType'
-import {fetchBeersApi} from 'api'
+import {fetchBeers as fetchBeersApi} from 'api'
 
 export const fetchBeers = () => async (dispatch) => {
     dispatch({type: FETCH_BEERS_START})

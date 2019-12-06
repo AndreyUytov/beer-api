@@ -1,7 +1,7 @@
 import React from 'react'
 
 function BeerItem (props) {
-    return (
+    return ( props.beers.length &&
         props.beers.map((elem) => {
             return (
                 <li className="beer-item" key={elem.id}>

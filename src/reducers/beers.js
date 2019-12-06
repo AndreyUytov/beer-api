@@ -1,18 +1,15 @@
 import {
-    GET_BEERS_START,
-    GET_BEERS_SUCCES,
-    GET_BEERS_FAIL
+    FETCH_BEERS_SUCCES,
 } from 'actionType'
 
 const initialState = {
-    beers: 'beers'
+    allBeers: []
 }
 
-export default function beers (state=initialState, {type, payload}) {
+export default function allBeers (state=initialState, {type, payload}) {
     switch (type) {
-        case GET_BEERS_START:
-            
-    
+        case FETCH_BEERS_SUCCES:
+            return {...state, allBeers: payload }
         default:
             return state
     }

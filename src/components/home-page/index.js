@@ -3,19 +3,30 @@ import {connect} from 'react-redux'
 
 import Template from 'components/template'
 import BeerList from 'components/beer-list'
+import {fetchBeers} from 'actions'
 
-function Home (props) {
-    return (
-        <Template {...props}>
-            <BeerList beers={props.beers} />
-        </Template>
-    )
-}
-
-const mapStateToProps = (store) => {
-    return {
-        beers: store.beers
+export class Home extends React.Component {
+    componentDidMount () {
+        this.props.fetchBeers()
+    }
+    render () {
+        return (
+            <Template {...this.props}>
+                <BeerList beers={this.props.allBeers.allBeers} />
+                {/* {console.log(this.props)} */}
+            </Template>
+        )
     }
 }
 
-export default connect(mapStateToProps)(Home)
+const mapStateToProps = (state) => {
+    return {
+       allBeers: state.allBeers
+    }
+}
+
+const mapDispatchToProps = {
+    fetchBeers
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home)
