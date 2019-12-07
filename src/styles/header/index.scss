@@ -27,14 +27,20 @@
 
 .navigation__link {
     min-width: 100px;
+    height: 35px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 14px;
+    color: black;
     text-transform: uppercase;
+    &:hover {
+        background-color: rgba(109, 54, 131, 0.801);
+    }
     &--active {
+        font-size: large;
         text-decoration: underline;
     }
 }

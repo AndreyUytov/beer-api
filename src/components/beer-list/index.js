@@ -28,9 +28,11 @@ function BeerItem (props) {
 export default class BeerList extends React.Component {
     render () {
         return (
-            <ul className="beer-list">
-                <BeerItem beers={this.props.beers} />
-            </ul>
+            <section className="main__beer-section">
+                <ul className="beer-list">
+                    <BeerItem {...this.props} />
+                </ul>
+            </section>
         )
     }
 }

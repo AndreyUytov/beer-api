@@ -4,7 +4,7 @@ import {
     Route
 } from 'react-router-dom'
 
-import Home from 'components/home-page'
+import Home from 'containers/home-page'
 
 export default (
     <Switch>
