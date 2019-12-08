@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 
-import allBeers from 'reducers/beers.js'
+import beers from 'reducers/beers.js'
+import beersPage from 'reducers/beersPage'
 
 export default (combineReducers ({
-    allBeers
+    beers,
+    beersPage
 }))

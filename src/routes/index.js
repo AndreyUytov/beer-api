@@ -8,6 +8,6 @@ import Home from 'containers/home-page'
 
 export default (
     <Switch>
-        <Route path='/' component={Home} exact/>
+        <Route path='/' component={Home} />
     </Switch>
 )
