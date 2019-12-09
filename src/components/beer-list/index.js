@@ -1,4 +1,8 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+import {fetchBeers} from 'actions'
+import {getBeers} from 'selectors'
 
 function BeerItem (props) {
     return ( props.beers.length &&
@@ -25,14 +29,29 @@ function BeerItem (props) {
     )
 }
 
-export default class BeerList extends React.Component {
+export class BeerList extends React.Component {
+    componentDidMount () {
+        this.props.fetchBeers()
+    }
     render () {
         return (
             <section className="main__beer-section">
                 <ul className="beer-list">
-                    <BeerItem {...this.props} />
+                    <BeerItem beers={this.props.beers} />
                 </ul>
             </section>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+      beers: getBeers(state)
+    }
+}
+
+const mapDispatchToProps = {
+    fetchBeers
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(BeerList)
