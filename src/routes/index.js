@@ -12,7 +12,11 @@ export default (
         <Route path='/' exact>
             <Home>
                 <Switch>
-                    <Route path='/:page' component = {BeerList} />
+                    <Route path='/favorites'>FAV</Route>
+                    <Route path ='cart'><div>CART</div></Route>
+                    <Route path='/:page'>
+                        <BeerList />
+                    </Route>
                 </Switch>
             </Home>
         </Route>
