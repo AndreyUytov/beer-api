@@ -1,26 +1,36 @@
 import React from 'react'
 import {
     Switch,
-    Route
+    Route,
+    Redirect
 } from 'react-router-dom'
 
 import Home from 'containers/home-page'
 import BeerList from 'components/beer-list'
+import Pagination from 'components/pagination'
+import Search from 'components/search'
 
 export default (
     <Switch>
-        <Route path='/' exact>
+        <Route exact path='/' >
+            <Redirect to='/pages'></Redirect>
+        </Route>
+        <Route path = '/'>
             <Home>
-                <Switch>
-                    <Route path='/favorites'>FAV</Route>
-                    <Route path ='cart'><div>CART</div></Route>
-                    <Route path='/:page'>
-                        <BeerList />
+                <Route path='/favorites' />
+                <Route path='/cart' />
+                <Route path='/pages'>
+                    <Search />
+                    <Route path='/pages/:page'>
+                        <Switch>
+                            <div>
+                                PAGE!!!
+                            </div>
+                        </Switch>
                     </Route>
-                </Switch>
+                    <Pagination />
+                </Route>
             </Home>
         </Route>
-        <Route path='/favorites' />
-        <Route path='/cart' />
     </Switch>
 )

@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link, useRouteMatch} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 function PageLink (props) {
     let match = useRouteMatch({
@@ -9,7 +8,7 @@ function PageLink (props) {
     
     return (
         <li className="beer-pagination__item">
-            <Link to={props.pageNumber} className={match ? "pagination-link pagination-link--active" : "pagination-link"}>
+            <Link to={`/pages/${props.pageNumber}`} className={match ? "pagination-link pagination-link--active" : "pagination-link"}>
               {props.pageNumber}
             </Link>
         </li>
