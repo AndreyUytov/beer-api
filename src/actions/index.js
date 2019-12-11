@@ -5,14 +5,15 @@ import {
 } from 'actionType'
 import {fetchBeers as fetchBeersApi} from 'api'
 
-export const fetchBeers = () => async (dispatch) => {
+export const fetchBeers = (page) => async (dispatch) => {
     dispatch({type: FETCH_BEERS_START})
 
     try {
-        const beers = await fetchBeersApi()
+        const beers = await fetchBeersApi(page)
         dispatch({
             type: FETCH_BEERS_SUCCES,
-            payload: beers
+            payload: beers,
+            page: page
         })
     } catch (err) {
         dispatch({

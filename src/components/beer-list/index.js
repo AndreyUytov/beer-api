@@ -31,6 +31,7 @@ function BeerItem (props) {
 
 export class BeerList extends React.Component {
     componentDidMount () {
+        
         this.props.fetchBeers()
     }
     render () {

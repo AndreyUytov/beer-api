@@ -2,17 +2,14 @@ import * as R from 'ramda'
 
 import {FETCH_BEERS_SUCCES} from 'actionType'
 
-const initialState = {
-    ids: []
-}
+const initialState = {}
 
-export default (state = initialState, {type, payload}) => {
+export default (state = initialState, {type, payload, page}) => {
     switch (type) {
         case FETCH_BEERS_SUCCES:
             return R.merge(state, {
-                ids: R.pluck('id', payload)
+                [`${page}`]: R.pluck('id', payload)
             })
-
         default: 
             return state
     }
