@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {fetchBeers} from 'actions'
+import {fetchBeers, fetchLoadMoreBeers} from 'actions'
 import {getBeers} from 'selectors'
 
 function BeerItem (props) {
@@ -30,9 +30,19 @@ function BeerItem (props) {
 }
 
 export class BeerList extends React.Component {
+    state = {
+        page: 2
+    }
+    onLoadMoreClick = () => {
+        this.props.fetchLoadMoreBeers(this.state.page);
+        this.setState((state) => ({
+            page: state.page + 1
+        }));
+
+    }
+
     componentDidMount () {
-        
-        this.props.fetchBeers()
+        // this.props.fetchBeers()
     }
     render () {
         return (
@@ -40,6 +50,10 @@ export class BeerList extends React.Component {
                 <ul className="beer-list">
                     <BeerItem beers={this.props.beers} />
                 </ul>
+                <button className='button button-load-more' 
+                onClick={this.onLoadMoreClick}  >
+                    Загрузить еще
+                </button>
             </section>
         )
     }
@@ -52,7 +66,23 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    fetchBeers
+    fetchBeers,
+    fetchLoadMoreBeers
 }
+
+
+function reformatingRed (arr) {
+    return arr.reduce((res, cur) => {
+        return res.set(cur.id, cur)
+    }, new Map())
+}
+
+const stable = {}
+
+const arr = [{id:'one',name:'One'}, {id:'two',name:'Two'}]
+
+console.log(reformatingRed(arr))
+
+
 
 export default connect(mapStateToProps,mapDispatchToProps)(BeerList)
