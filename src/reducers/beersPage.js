@@ -13,9 +13,8 @@ export default (state = initialState, {type, payload}) => {
                 ids: R.pluck('id', payload)
             })
         case LOAD_MORE_BEERS_SUCCESS:
-            const ids = R.pluck('id', payload)
             return R.merge(state, {
-                ids: R.concat(ids, state.ids)
+                ids: R.pluck('id', payload)
             })
         default: 
             return state

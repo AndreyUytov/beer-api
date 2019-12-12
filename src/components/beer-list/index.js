@@ -42,7 +42,7 @@ export class BeerList extends React.Component {
     }
 
     componentDidMount () {
-        // this.props.fetchBeers()
+        this.props.fetchBeers()
     }
     render () {
         return (
