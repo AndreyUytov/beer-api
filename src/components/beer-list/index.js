@@ -48,7 +48,7 @@ export class BeerList extends React.Component {
         return (
             <section className="main__beer-section">
                 <ul className="beer-list">
-                    <BeerItem beers={this.props.beers} />
+                    {this.props.beers.length ? (<BeerItem beers={this.props.beers} />) : `...Loading`}
                 </ul>
                 <button className='button button-load-more' 
                 onClick={this.onLoadMoreClick}  >
@@ -70,19 +70,26 @@ const mapDispatchToProps = {
     fetchLoadMoreBeers
 }
 
+export default connect(mapStateToProps,mapDispatchToProps)(BeerList)
 
-function reformatingRed (arr) {
-    return arr.reduce((res, cur) => {
+
+function indexById (arr) {
+    return Object.fromEntries(arr.reduce((res, cur) => {
         return res.set(cur.id, cur)
-    }, new Map())
+    }, new Map()))
 }
 
 const stable = {}
 
-const arr = [{id:'one',name:'One'}, {id:'two',name:'Two'}]
+const arr = [{id:'one', name:'One'}, {id:'two', name:'Two'}]
 
-console.log(reformatingRed(arr))
+const obj = indexById(arr);
 
+const union = {...stable, ...obj}
+ 
 
+ const obj2 = {tree:{id:'tree', name:'tree'}}
 
-export default connect(mapStateToProps,mapDispatchToProps)(BeerList)
+ const union2 = {...union, ...obj2}
+
+ console.log(union2)

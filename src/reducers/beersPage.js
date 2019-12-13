@@ -9,13 +9,15 @@ const initialState = {
 export default (state = initialState, {type, payload}) => {
     switch (type) {
         case FETCH_BEERS_SUCCESS:
-            return R.merge(state, {
-                ids: R.pluck('id', payload)
-            })
+            return {...state, 
+                ids: [...state.ids, ...payload.map( (elem) => {
+                    return elem.id;
+                } )]}
         case LOAD_MORE_BEERS_SUCCESS:
-            return R.merge(state, {
-                ids: R.pluck('id', payload)
-            })
+            return {...state, 
+                ids: [...state.ids, ...payload.map( (elem) => {
+                    return elem.id;
+                } )]}
         default: 
             return state
     }
