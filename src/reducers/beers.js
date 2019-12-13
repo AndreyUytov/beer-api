@@ -1,5 +1,3 @@
-import * as R from 'ramda'
-
 import {
     FETCH_BEERS_SUCCESS,
     LOAD_MORE_BEERS_SUCCESS
